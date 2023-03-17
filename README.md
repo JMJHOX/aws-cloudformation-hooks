@@ -1,5 +1,5 @@
 # aws-cloudformation-hooks
-This tutorial is about how to develop your hooks without losing your humanity
+This tutorial is about how to develop your hooks without losing your humanity, step-by-step
 
 This tutorial will be  divided in three sections. I hope it works for you.
 
