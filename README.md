@@ -6,7 +6,7 @@ This tutorial will be  divided in three sections. I hope it works for you.
 
 
 <!-- TABLE OF CONTENTS -->
-<details>
+
   <summary>Table of Contents</summary>
   <ol>
     <li>
@@ -28,7 +28,7 @@ This tutorial will be  divided in three sections. I hope it works for you.
       </ul>
     </li>
   </ol>
-</details>
+
 
 
 
