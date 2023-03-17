@@ -87,9 +87,21 @@ Why we should have to do this? well, we have a great reason for this.
 Turns out, Cloudformation works with AWS Lambda "under the hood" to execute our hooks when an Stack is created/deleted/updated.
 That´s why we can´t use any environment to develop our hooks, It needs to be worked like we are creating an AWS Lambda Layer.
 
-Now, we have to create our python virtual environment. For this:
+Now, we have to build our image in our machine and run it! And remember we need to get into our docker environment to start to work.
 
-We install the necesary library
+```
+docker build -t {my_image_name} .
+docker run -d {my_image_name}
+```
+
+Finally, we need to access it:
+```
+docker exec -it {my_image_name} bash
+```
+
+Next, we have to create our python virtual environment inside our docker image. For this:
+
+We install the necessary libraries:
 ```
 pip install virtualenv
 ```
@@ -102,144 +114,18 @@ And activate it
 ```
 source env/bin/activate
 ```
-<!-- USAGE EXAMPLES -->
-## Usage
+and We´re almost done!
+Remember, our principal objective is to develop our own hooks. We must have to learn the basics first.
+We´ll be using an base hook resource from the [aws-cloudformation-samples](https://github.com/aws-cloudformation/aws-cloudformation-samples/tree/main/hooks/python-hooks/resource-tags). 
 
-# getAgeLimitOnUTC
-Is a method used to get the age limit of the user based on the actual date of the year or a custom date you want to use it from reference using UTC
-## How to use it
-It has two parameters: 
+We´ll need to download this sample into our machine, we can download the .zip file and move it to our machine with our mouse or use the CLI:
 ```
-getAgeLimitOnUTC(dateRange: number, ChangeDate?: string)
-
-dateRange: number(the number you want to limit)
-ChangeDate?: string (the date you migh want to use from reference, the format is dd/mm/yyyy)
+wget http://github.com/[username]/[repo]/archive/master.zip
+unzip file_name
 ```
+This command downloads the repository as an .zip file
 
-# getAgeLimitOnLocal
-Is a method used to get the age limit of the user based on the actual date of the year or a custom date you want to use it from reference using your local time
-## How to use it
-It has two parameters: 
-```
-getAgeLimitOnLocal(dateRange: number, ChangeDate?: string)
-
-dateRange: number(the number you want to limit)
-ChangeDate?: string (the date you migh want to use from reference, the format is dd/mm/yyyy)
-```
-
-# dateFormat
-Is a method that formats any kind of date to the want desired for the user, if for some reasons, the date is impossible to get, it returns the same date introduced.
-
-
-## Structure
-```
-dateFormat(
-  dateRequest: string, 
-  formatStyle: string)
-
-```
-dateRequest is the date introduced on string format. it is a experimental feature, for now this kind of format is permitted to be used:
-      <ul>
-        <li>02-23-1998</li>
-        <li>02/23/1998</li>
-        <li>02231998</li>
-      </ul>
-
-formatStyle is the type of date you want to be returned or formatted, this is a list of formats you migh want to use:
-      <ul>
-        <li>ddMMyyyy</li>
-        <li>dd-MM-yyyy</li>
-        <li>dd/MM/yyyy</li>
-        <li>ISO</li>
-        <li>UNIX</li>
-      </ul>
-  
-Take in consideration that some formats as ddMMyyyy, dd-MM-yyyy and ISO returns a string on response using this function, meanwhile UNIX format returns a number on response.
-Formats like dd.MM.yyyy , MM.dd.yyyy and other kind, we are working to this combinations be implemented on our next release, for now it is not being supported.
-## How to use it
-
-### ddMMyyyy
-```
-dateSimplify.dateFormat('02-23-1998', 'ddMMyyyy')
-```
-It should Return 02231998 on string format.
-### dd-MM-yyyy
-
-```
-dateSimplify.dateFormat('02-23-1998', 'dd-MM-yyyy')
-```
-It should Return 02-23-1998 on string format.
-
-
-### ISO
-
-```
-dateSimplify.dateFormat('02-23-1998', 'ISO')
-```
-It should Return 1998-02-23T05:00:00.000Z on string format.
-
-
-### UNIX
-```
-dateSimplify.dateFormat('02-23-1998', 'UNIX')
-```
-It should Return 888192000000 on number format.
-
-# unixFormat
-Is a method that formats any kind of date to the want desired for the user, using UNIX format to be handled.
-
-
-## Structure
-```
-unixFormat(
-  dateRequest: number, 
-  formatStyle: string)
-
-```
-dateRequest is the date introduced on string format. it is a experimental feature, for now this kind of format is permitted to be used:
-      <ul>
-        <li>1648313180</li>
-      </ul>
-
-formatStyle is the type of date you want to be returned or formatted, this is a list of formats you migh want to use:
-      <ul>
-        <li>ddMMyyyy</li>
-        <li>dd-MM-yyyy</li>
-        <li>dd/MM/yyyy</li>
-      </ul>
-  
-# dateIsValid
-method to check if a date is valid or not. it only returns false or true.
-## How to use it
-```
-dateSimplify.dateIsValid('12','12','1998')
-```
-It should Return 12/12/1998 on string format
-
-
-# dateIsValidFix
-Checks if the date is valid, and attempts to fix the date automatically for yourself
-
-```
-Format:
-dateSimplify.dateIsValidFix(day: string, month: string, year: string)
-```
-
-## How to use it
-```
-dateSimplify.dateIsValidFix('12','12','1998')
-```
-
-It should Return 12/12/1998 on string format
-
-
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
+PENDING TUTORIAL
 <!-- ROADMAP -->
 ## Roadmap
 
