@@ -116,7 +116,7 @@ source env/bin/activate
 ```
 and We´re almost done!
 Remember, our principal objective is to develop our own hooks. We must have to learn the basics first.
-We´ll be using an base hook resource from the [aws-cloudformation-samples](https://github.com/aws-cloudformation/aws-cloudformation-samples/tree/main/hooks/python-hooks/resource-tags). 
+So we´ll be using an base hook resource from the [aws-cloudformation-samples](https://github.com/aws-cloudformation/aws-cloudformation-samples/tree/main/hooks/python-hooks/resource-tags). 
 
 We´ll need to download this sample into our machine, we can download the .zip file and move it to our machine with our mouse or use the CLI:
 ```
@@ -126,18 +126,7 @@ unzip file_name
 This command downloads the repository as an .zip file
 
 PENDING TUTORIAL
-<!-- ROADMAP -->
-## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/JMJHOX/date-simplify/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -164,7 +153,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Date-Simplify is distributed under the [MIT License](https://opensource.org/licenses/MIT).
+aws-cloudformation-hooks is distributed under the [MIT License](https://opensource.org/licenses/MIT).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -175,39 +164,13 @@ Date-Simplify is distributed under the [MIT License](https://opensource.org/lice
 
 JMJHOX  - josemiguelaparicio507@gmail.com
 
-Project Link: [https://github.com/JMJHOX/date-simplify](https://github.com/JMJHOX/date-simplify)
+Tutorial Link: [https://github.com/JMJHOX/aws-cloudformation-hooks](https://github.com/JMJHOX/aws-cloudformation-hooks)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!--
 
- ACKNOWLEDGMENTS 
-## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
--->
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-
-[stars-shield]: https://img.shields.io/github/stars/jmjhox/date-simplify.svg?style=for-the-badge
-[stars-url]: https://github.com/JMJHOX/date-simplify/stargazers
-[issues-shield]: https://img.shields.io/github/issues/jmjhox/date-simplify.svg?style=for-the-badg
-[issues-url]: https://github.com/JMJHOX/date-simplify/issues
-[license-shield]: https://img.shields.io/github/license/jmjhox/date-simplify.svg?style=for-the-badg
-[license-url]: https://opensource.org/licenses/MIT
 
 
 
@@ -215,6 +178,4 @@ Use this space to list resources you find helpful and would like to give credit 
 
 In order to ensure that the Date-simplify community is welcoming to all, please review and abide by the [Code of Conduct](https://github.com/JMJHOX/date-simplify/blob/development/docs/CODE_OF_CONDUCT.md).
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Date-simplify, please send an e-mail to Jose Aparicio via [josemiguelaparicio507@gmail.com](mailto:josemiguelaparicio507@gmail.com). All security vulnerabilities will be promptly addressed.
